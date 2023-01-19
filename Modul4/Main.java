@@ -142,7 +142,5 @@ public static void main(String[] args) {
     karl.getGrade(is100);
     
     
-    
-    
 }
 }
