@@ -5,52 +5,86 @@ class Student {
     private ArrayList<Grade> grades = new ArrayList<Grade>();
     private ArrayList<Subject> subjects = new ArrayList<Subject>();
 
-    public Student(String iname) {
+    Student(String iname) {
         name = iname;
     }
 
-    public void getSubjects() {
+    public void printGrades() {
+        int iteration = 0;
         for (Grade grade : grades) {
-            grade.
+            System.out.println(grade.getGrade()+" in "+grade.getSubject().getName()+". Index: "+iteration+"\n");
+            ++iteration;
         }
 
     }
 
-    public void addGrade() {
+    public void printSubjects() {
+        int len = subjects.size();
+        int iteration = 0;
+        while (len != iteration) {
+            System.out.println(subjects.get(iteration).getName()+" is in your profile at index "+iteration+"\n");
+            ++iteration;
+        }
+        
+    }
+
+    public void addSubject(Subject subject) {
+        subjects.add(subject);
+        
+    }
+
+    public void addGrade(Grade grade) {
+        grades.add(grade);
 
     }
 
-    public void addSubject() {
-
+    public void removeGrade(int index) {
+        grades.remove(index);
     }
 
-    public void removeGrade() {
-
-    }
-
-    public void removeSubject() {
-
+    public void removeSubject(int index) {
+        subjects.remove(index);
     }
 
 }
 
 class Grade {
     private Subject subject;
+    private Student student; 
     private String grade;
 
-    public Grade(Subject isubject,String igrade) {
+    Grade(Subject isubject, Student istudent, String igrade) {
         subject = isubject;
         grade = igrade;
     }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    
+    public Subject getSubject() {
+        return subject;
+    }
+
+
 }
 
 class Subject {
     private String name;
     private int points;
 
-    public Subject(String iname, int ipoints) {
+    Subject(String iname, int ipoints) {
         name = iname;
         points = ipoints;
+    }
+
+    public String getName() {
+        return name;
     }
 }
 
@@ -58,7 +92,38 @@ class Subject {
 
 class Main {
 public static void main(String[] args) {
-    System.out.println("Works")
+    
+    Student karl = new Student("Karl");
+    Subject is100 = new Subject("IS100", 10);
+    Subject is101 = new Subject("IS101", 10);
+    Subject is102 = new Subject("IS102", 10);
+    Subject is103 = new Subject("IS103", 10);
+    
+    Grade is100karl = new Grade(is100, karl, "A");
+    Grade is101karl = new Grade(is101, karl, "B");
+    Grade is102karl = new Grade(is102, karl, "C");
+
+    karl.addGrade(is100karl);
+    karl.addGrade(is101karl);
+    karl.addGrade(is102karl);
+
+    karl.addSubject(is100);
+    karl.addSubject(is101);
+    karl.addSubject(is102);
+    karl.addSubject(is103);
+
+    karl.printGrades();
+    karl.printSubjects();
+
+    karl.removeGrade(1);
+    karl.removeSubject(3);
+
+    karl.printGrades();
+    karl.printSubjects();
+
+    
+    
+    
     
 }
 }
