@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 class Student {
     private String name;
@@ -15,6 +16,21 @@ class Student {
             System.out.println(grade.getGrade()+" in "+grade.getSubject().getName()+". Index: "+iteration+"\n");
             ++iteration;
         }
+
+    }
+
+    public void getGrade(Subject subject) {
+        Iterator<Grade> itr = grades.iterator();
+        Grade gradeItr;
+
+        while (itr.hasNext()) {
+            gradeItr = itr.next();
+            if (gradeItr.getSubject().getName() == subject.getName()) {
+                gradeItr.printGrade();
+                break;
+            }
+        }
+        
 
     }
 
@@ -65,12 +81,14 @@ class Grade {
     public String getGrade() {
         return grade;
     }
-
     
     public Subject getSubject() {
         return subject;
     }
 
+    public void printGrade() {
+        System.out.println(grade +"\n");
+    }
 
 }
 
@@ -116,11 +134,12 @@ public static void main(String[] args) {
     karl.printSubjects();
 
     karl.removeGrade(1);
-    karl.removeSubject(3);
+    karl.removeSubject(2);
 
     karl.printGrades();
     karl.printSubjects();
 
+    karl.getGrade(is100);
     
     
     
