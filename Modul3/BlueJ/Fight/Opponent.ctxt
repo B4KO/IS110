@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Opponent
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Oponent\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=ihp\ iatk\ iname
+comment1.target=Opponent(int,\ int,\ java.lang.String)
+comment2.params=
+comment2.target=int\ doubbleAttack()
+comment3.params=
+comment3.target=int\ attack()
+comment4.params=
+comment4.target=int\ get_hp()
+comment5.params=dmg
+comment5.target=void\ reduce_hp(int)
+numComments=6
