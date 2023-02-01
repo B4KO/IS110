@@ -26,6 +26,8 @@ class Monster {
     public String name = "Jens Stoltenberg";
 }
 
+
+
 class Fight {
     private Monster monster;
     private Robot robot;
@@ -60,6 +62,8 @@ public static void main(String[] args) {
     Monster monsterJens = new Monster();
     Fight round1 = new Fight(monsterJens, roboDavid);
     round1.WhoWins();
+
+    String name = "Gabriel";
 
 
     
