@@ -1,4 +1,4 @@
-package Forbrems;
+package src.main;
 
 public class Forbrems {
     private int _maxStyrke;
@@ -15,4 +15,4 @@ public class Forbrems {
         return mengdeBrems * 1;
     }
 
-}S
+}

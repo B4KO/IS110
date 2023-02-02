@@ -1,4 +1,4 @@
-package Bakbrems;
+package src.main;
 
 public class Bakbrems {
     private int _maxStyrke;

@@ -1,7 +1,5 @@
-package SykkelButikk;
+package src.main;
 import java.util.ArrayList;
-
-import Sykkel.Sykkel;
 
 class SykkelButikk {
 

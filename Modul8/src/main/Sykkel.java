@@ -1,8 +1,5 @@
-package Sykkel;
+package src.main;
 
-import Forbrems.Forbrems;
-import Bakbrems.Bakbrems;
-import Gear.Gear;
 import java.util.Random;
 
 public class Sykkel {
