@@ -8,6 +8,7 @@ import java.util.Random;
 class main {
     Random rand = new Random();
     public static void main(String[] args) {
-        
+        SykkelButikk sykkelButikk = new SykkelButikk();
+
     }
 }

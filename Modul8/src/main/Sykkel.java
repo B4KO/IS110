@@ -5,9 +5,6 @@ import java.util.Random;
 public class Sykkel {
     
     Random rand = new Random();
-    
-    
-
     private String _farge;
     private String _type;
     private int _pris;
@@ -27,7 +24,9 @@ public class Sykkel {
 
     public String faaType() {
         return _type;
-    } 
+    }
+
+    public int faaPris() { return _pris; }
 
     public int hastighet(int tidspunkt) {
         return rand.nextInt();
