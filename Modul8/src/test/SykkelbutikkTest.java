@@ -22,7 +22,7 @@ public class SykkelbutikkTest {
             {
                 for(String token : nextLine)
                 {
-                    System.out.print(token+" ");
+                    System.out.print(token+" 1");
                 }
                 System.out.print("\n");
             }
