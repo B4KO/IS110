@@ -1,9 +1,9 @@
 package src.main;
 import java.util.ArrayList;
 
-class SykkelButikk {
+public class SykkelButikk {
 
-    private ArrayList<Sykkel> _sykler;
+    private ArrayList<Sykkel> _sykler = new ArrayList<>();
 
     public void registrerSykkel(Sykkel sykkel) {
         _sykler.add(sykkel);

@@ -34,6 +34,6 @@ public class Sykkel {
 
     @Override
     public String toString() {
-        return _farge + " " + _type + "for pris: " + _pris +"KR";
+        return _farge + " " + _type + " sykkel for " + _pris +" kr";
     }
 }
