@@ -1,18 +1,12 @@
 package src.main;
 
-public class Forbrems {
-    private int _maxStyrke;
-    private int _sisteService;
-    private String _type;
+import src.main.Brems;
+
+public class Forbrems extends Brems {
+
+    public String subtype = "Forbrems";
 
     public Forbrems(int maxStyrke, int sisteService, String type) {
-        _maxStyrke = maxStyrke;
-        _sisteService = sisteService;
-        _type = type;
+        super(maxStyrke, sisteService, type);
     }
-
-    public int styrkeNaa(int mengdeBrems) {
-        return mengdeBrems * 1;
-    }
-
 }
