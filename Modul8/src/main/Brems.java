@@ -15,4 +15,8 @@ public class Brems {
     public int styrkeNaa(int mengdeBrems) {
         return mengdeBrems * 1;
     }
+
+
 }
+
+

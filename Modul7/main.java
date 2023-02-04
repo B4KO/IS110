@@ -15,37 +15,40 @@ class main {
    * @return void.
    */
     public static void main(String[] args) {
-        int numArg;
-        for (String arg: args) {
-            try {
-                numArg = Integer.parseInt(arg);
-                System.out.println(arg);
-            } catch (NumberFormatException e) {
-                System.out.println("Argument "+arg+" was invalid int.");
-            }
+
+        for (int i = 0; i < ; i++) {
+            
         }
 
 
-        HashMap<String, String> countriesCapitals = new HashMap<String, String>();
-        
+        HashMap<String, String> countriesCapitals = new HashMap<>();
+
+
         countriesCapitals.put("England", "London");
         countriesCapitals.put("Germany", "Berlin");
         countriesCapitals.put("Norway", "Oslo");
         countriesCapitals.put("USA", "Washington DC");
 
+
         for (String arg: args) {
             try {
                 System.out.println("Arg: "+arg+" gets: "+ countriesCapitals.get(arg));
-                String msg = arg == "Norway" ? "Norway was inputted" : "Norway wasn't inputted";
+
+                String msg = arg.equals("Norway") ? "Norway was inputted" : "Norway wasn't inputted";
+
                 System.out.println(msg);
             } catch (NullPointerException  e) {
                 System.out.println("Argument was invalid.");
             }
         }
+
         Scanner scanner = new Scanner(System.in);
         int numParsed;
-        ArrayList<Integer> intArrayList = new ArrayList<Integer>();
-        System.out.println("Enter values, enter anything else to end."); 
+
+        ArrayList<Integer> intArrayList = new ArrayList<>();
+
+        System.out.println("Enter values, enter anything else to end.");
+
         while (true) {
             String input = scanner.nextLine();
             try {
@@ -55,7 +58,6 @@ class main {
                 break;
             }
         }
-        intArrayList.sort(Comparator.naturalOrder());
         System.out.println(intArrayList);
     }
 }
